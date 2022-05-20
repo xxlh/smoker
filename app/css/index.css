@@ -87,8 +87,8 @@ body::-webkit-scrollbar {
 	left: 50%;
 	top: 0;
 	margin-left: -3.75rem;
-	/* overflow: scroll; */
-	/* -webkit-overflow-scrolling:touch; */
+	overflow: scroll;
+	-webkit-overflow-scrolling:touch;
 }
 .page03 {
 	display: none;
@@ -159,6 +159,8 @@ div>img {
 	top: 0;
 	margin-left: -3.75rem;
 	overflow: hidden; */
+	min-height: 14rem;
+	overflow: hidden;
 
 }
 .photobg{
@@ -308,13 +310,14 @@ photo-frame>img{
 	display: none;
 	width: 8rem;
 	height: 1.14rem;
-	position: absolute;
-	bottom:0.5rem;
+	position: relative;
+	/* bottom:0.5rem;
 	left: 50%;
-	margin-left: -4rem;
+	margin-left: -4rem; */
 	color: #fff;
 	text-align: center;
 	font-size: 0.3rem;
+	margin: 0.5rem auto;
 	
 }
 #reset{
@@ -601,11 +604,11 @@ photo-frame>img{
 }
 
 .poster-box .close{
-	position: absolute;
+	position: fixed;
 	width: 0.5rem;
 	height: 0.5rem;
 	right: 0.3rem;
-	top: 0.3rem;
+	top: .8rem;
 	color: #fff;
 	background-image: url(../images/close.png);
 	background-size: 100% 100%;
@@ -648,7 +651,7 @@ photo-frame>img{
 	position: absolute;
 	width: 1.12rem;
     left: 50%;
-    top: 1rem;
+    top: 1.4rem;
     margin-left: -0.56rem;
 	animation: pulse 1s infinite ;
 }
@@ -889,3 +892,16 @@ photo-frame>img{
 		bottom:1.2rem;
 	}
 }
+
+
+@-webkit-keyframes closeRound{ 
+	0%{ -webkit-transform:rotate(0deg); transform:rotate(0deg);}
+	10%{ -webkit-transform:rotate(360deg); transform:rotate(360deg);}
+	100%{ -webkit-transform:rotate(360deg); transform:rotate(360deg);}
+}
+@keyframes closeRound{ 
+	0%{ -webkit-transform:rotate(0deg); transform:rotate(0deg);}
+	10%{ -webkit-transform:rotate(360deg); transform:rotate(360deg);}
+	100%{ -webkit-transform:rotate(360deg); transform:rotate(360deg);}
+}
+.closeRound{ -webkit-animation:playMusic 2s linear infinite; animation:playMusic 2s linear infinite;}

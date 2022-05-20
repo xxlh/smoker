@@ -52,6 +52,7 @@ class app{
 			width: width, //dom 原始宽度
 			height: height, //dom 原始高度
 			useCORS: true,//开启跨域配置
+			backgroundColor:'#f9f7f5',
 		};
 		html2canvas(shareContent, opts).then(function (canvas) {
 			let image = new Image();
