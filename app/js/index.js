@@ -31,9 +31,9 @@ var wx = {};
 //微信分享文案设置
 wx.shareLink =location.origin + location.pathname; 
 wx.sharePic = "http://www.appmn.cn/front/project2022/smoker/img/wxShare.jpg?9"; 
-wx.shareDesc = `5月28日，厦门疾控“自在呼吸 氧气情书”特别策划`;
+wx.shareDesc = `5月28日宝龙一城，“自在呼吸·氧气情书”打卡活动福利多多，等着你来～`;
 wx.shareTit = "告白无烟厦门！"; 
-wx.sharePyq = `告白无烟厦门！5月28日，厦门疾控“自在呼吸 氧气情书”特别策划`;
+wx.sharePyq = `告白无烟厦门！5月28日宝龙一城，“自在呼吸·氧气情书”打卡活动福利多多，等着你来～`;
 let wxshare =new wxShare();
 wxshare.setInfo(wx);
 
@@ -184,17 +184,17 @@ $(async function(){
 	// let initInfo =  window._initInfo;
 	tid = initInfo.tid;
 	qrCode("qrcode");
-	let word = new maxRow({selector:"#word", row:3, dialog:swal})
 	let nickname = new maxRow({selector:"#nickname", row:1, dialog:swal})
+	let word = new maxRow({selector:"#word", row:2, dialog:swal})
 	nickname.setText(initInfo.nickname)
 	// $("#nickname").html(initInfo.nickname);
 	// let picId =Math.floor(Math.random()*5) +1
 	// $("#imgid").attr("src",require(`../images/${picId}.png`));
-	$("#imgid").attr("src",require(`../images/1.png`));
 	$(".psum span").html(`我是第${initInfo.psum}位无烟使者 `);
+	$("#imgid").attr("src",require(`../images/1.png`));
 	$(".page02").show().siblings().hide();
-	START_X = 0 ;
 	START_Y =0;
+	START_X = 0 ;
 	resetElement();
 
     $(".label-img").click(function(){
@@ -212,8 +212,8 @@ $(async function(){
 		$("#tips").show();
 		repairPhoto(file,1,750).then((result)=>{
 			$(`#imgid`).attr("src",result.img);
-			START_X = 0 ;
 			START_Y =0;
+			START_X = 0 ;
 			resetElement();
 			$("#tips").hide();
 		});
@@ -253,11 +253,11 @@ $(async function(){
 		$("#tips").show();
 		let text = $(".page02  .word div").html();
 		let data = {};
-		data.text = $(".page02  .word div").html();
+		data.text = text;
 		Ajax.post("https://www.appmn.cn/public/baidu/sensitive_words.php",data, (json) => {
 			if (json.err == 0) { 
-				$(".is-show").hide();
 				$(".is-show1").show();
+				$(".is-show").hide();
 				app.setListener(text);
 			}else{
 				swal(`"${json.data}"  ${json.msg}`);
@@ -292,7 +292,7 @@ $(async function(){
 		// 	}
 		// })
 		console.log(window.imgurl_s)
-		let title=`告白无烟厦门！5月28日，厦门疾控“自在呼吸 氧气情书”特别策划。${$(".psum span").html()}` ,rLink = location.origin + location.pathname,site ="转贴网站",pic =window.imgurl_s;
+		let title=`告白无烟厦门！5月28日宝龙一城，“自在呼吸·氧气情书”打卡活动福利多多，等着你来～。${$(".psum span").html()}` ,rLink = location.origin + location.pathname,site ="转贴网站",pic =window.imgurl_s;
 		window.open('http://service.weibo.com/share/share.php?title='+encodeURIComponent(title)+'&url='+encodeURIComponent(rLink)+'&appkey='+encodeURIComponent(site)+'&pic='+encodeURIComponent(pic),'_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes')       	
 	})
 	$(".poster-box .close").click(function(){

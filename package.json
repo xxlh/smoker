@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "starts": "webpack-dev-server --config ./build/webpack.dev.js  --port 80",
     "start": "webpack-dev-server --config ./build/webpack.dev.js --host t.it.mn.sina.com --port 80",
     "teststart": "webpack-dev-server --config ./build/webpack.dev.js --host t.it.mn.sina.com --port 801",
     "winserver": "webpack-dev-server --config ./build/webpack.dev.js --host 192.168.200.5 --port 80",
     "server": "webpack-dev-server --config ./build/webpack.dev.js",
     "build": "webpack --config ./build/webpack.prod.js --progress",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "npm run build && node ./build/deploy.js"
   },
   "author": "",
   "license": "ISC",
@@ -78,6 +80,8 @@
     "qrcode": "^1.4.4",
     "qrcode-npm": "0.0.3",
     "scroller": "0.0.3",
+    "sftp-upload": "^1.0.4",
+    "ssh2-sftp-client": "^8.1.0",
     "sweetalert": "^2.1.0",
     "swiper": "^4.3.5",
     "vconsole": "^3.3.4"

@@ -103,7 +103,7 @@ div>img {
 /* load */
 .load .title {
 	position: relative;
-    width: 5.08rem;
+    width: 5.77rem;
     margin: 0 auto;
     margin-top: 4.5rem;
 }
@@ -194,25 +194,38 @@ div>img {
 }
 .rule-btn{
 	position: relative;
-	width: 2.11rem;
+	width: 1.95rem;
 	margin: 0.3rem auto 0;
 }
 
 .qrcode{
 	position: absolute;
-    width: 1.6rem;
-	top: 12.34rem;
-    left: .86rem;
+    width: 1rem;
+    height: 1rem;
+    top: 13rem;
+    left: 1.66rem;
 	display: none;
 }
+.qrcode-tip{ position: absolute;
+    top: 14.1rem;
+    width: 2rem;
+    text-align: center;
+    left: 1.2rem;
+    font-size: .15rem;
+    color: #ee7731;
+	display: none;
+}
+	.qrcode-tip.t2{ 
+		top: 14.3rem;
+		}
 .psum{
     position: absolute;
-    width: 5rem;
+    width: 4.4rem;
     font-size: 0.25rem;
-    color: #000;
-    top: 12.92rem;
-	text-align: left;
-	letter-spacing: 0.05rem;
+    color: #67769e;
+    top: 13.2rem;
+    text-align: left;
+    /* letter-spacing: 0.05rem; */
     left: 2.7rem;
     /* left: 6.5rem; */
 	display: none;
@@ -561,8 +574,8 @@ photo-frame>img{
 }
 .rule-box .content .rules{
 	position: absolute;
-    top: 3.3rem;
-    width: 5.96rem;
+    top: 3.2rem;
+    width: 6.43rem;
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -631,15 +644,15 @@ photo-frame>img{
     top: 0.88rem;
     left: 50%;
     overflow: hidden;
-    width: 5.49rem;
-    height: 2.99rem;
+	width: 6.99rem;
+    height: 3.99rem;
     transform: translate(-50%, 0);
 }
 .page02 .carmen{
 	position: absolute;
-    width: 5.49rem;
-    height: 2.99rem;
-    top: 6.38rem;
+	width: 6.99rem;
+    height: 3.99rem;
+    top: 6.18rem;
     left: 50%;
     /* margin-left: -3.645rem; */
     overflow: hidden;
@@ -667,8 +680,8 @@ photo-frame>img{
 .page02 .label-img{
 	position: absolute;
 	display:inline-block;
-	width: 5.49rem;
-    height: 2.99rem;
+	width: 6.99rem;
+    height: 3.99rem;
     top: 0rem;
     left: 50%;
     transform: translate(-50%, 0);
@@ -679,9 +692,9 @@ photo-frame>img{
 }
 .page02 #headupload{
 	position: absolute;
-	width: 5.49rem;
-    height: 2.99rem;
-    top: 0.18rem;
+	width: 6.99rem;
+    height: 3.99rem;
+    top: 0rem;
     left: 50%;
     transform: translate(-50%, 0);
     border-radius: 50%;
@@ -689,27 +702,32 @@ photo-frame>img{
 }
 .page02 .qstip{
 	position: absolute;
-	width: 3.62rem;
-    width: 3.62rem;
+    width: 5.19rem;
     margin-left: -2.78rem;
     left: 50%;
-    top: 10rem;
+    top: 10.8rem;
 }
 .page02 .qingshu{
 	position: absolute;
 	width: 5.88rem;
-	height: 252rem;
+	height: 1.74rem;
 	left: 50%;
-	top: 9.6rem;
+	top: 10.4rem;
 	transform: translate(-50%, 0);
 }
-
+.bottom{
+	position: absolute;
+	top:12.3rem;
+	width: 7.5rem;
+	left: 0;
+}
 .page02 .title{
 	position: absolute;
-	width: 5.01rem;
+	width: 5.77rem;
     left: 50%;
     top: 3.2rem;
-    margin-left: -2.505rem;
+    /* margin-left: -2.505rem; */
+	transform: translate(-50%, 0);
 }
 .page02 .nickname{
 	position: absolute;
@@ -720,7 +738,7 @@ photo-frame>img{
 	background-image: url(../images/nickname.png);
 	background-size: 100% 100%;
 	left: 50%;
-	top: 9.38rem;
+	top: 10rem;
 	margin-left: -1.025rem;
 	color: #f1661a;
 	text-align: center;
@@ -746,7 +764,7 @@ photo-frame>img{
 	position: absolute;
 	width: 0.5rem;
     right: 2.7rem;
-	top: 9.18rem;
+	top: 9.78rem;
 	animation: wobble 1s infinite ;
 	/* transform-origin : bottom right; */
 }
@@ -791,7 +809,7 @@ photo-frame>img{
     display: block;
     left: 0.1rem;
     width: 5.88rem;
-    height: 2.52rem;
+    height: 1.74rem;
     font-size: .29rem;
     line-height: .84rem;
     text-align: left;
@@ -810,22 +828,22 @@ photo-frame>img{
 .page02 .btn{
 	width: 3.04rem;
     position: absolute;
-    top: 12.3rem;
+    top: 13.6rem;
     left: 50%;
     margin-left: -1.52rem;
 	/* animation: pulse 1s infinite; */
 }
 .page02 .tip{
-	width: 4.42rem;
+	width: 4.2rem;
     position: absolute;
-    top: 13.2rem;
+    top: 12.3rem;
     left: 50%;
     transform: translate(-50%, 0);
 }
 .page02 .rule_btn{
-	width: 1.51rem;
+	width: 1.91rem;
     position: absolute;
-    top: 13.8rem;
+    top: 13rem;
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -862,25 +880,34 @@ photo-frame>img{
 		top: 3.2rem;
 	}
 	.page02 .btn{
-		top: 13rem;
+		top: 14.3rem;
 	}
 	.page02 .tip{
-		top: 14rem;
+		top: 12.9rem;
 	}
 	.page02 .qingshu {
-		top: 10rem;
+		top: 10.8rem;
 	}
 	.page02 .qstip {
-		top: 10.4rem;
+		top: 11.2rem;
 	}
 	.page02 .rule_btn {
-		top: 14.5rem;
+		top: 13.7rem;
+	}
+	.bottom{
+		top:13rem
 	}
 	.qrcode {
-		top: 13rem;
+		top: 13.7rem;
 	}
 	.psum {
-		top: 13.6rem;
+		top: 13.9rem;
+	}
+	.qrcode-tip {
+		top: 14.8rem;
+	}
+	.qrcode-tip.t2 {
+		top: 15rem;
 	}
 	.poster-box .content{
 		margin-top: 1rem;
