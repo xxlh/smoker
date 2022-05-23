@@ -40,7 +40,7 @@ class app{
 		
 		var scaleBy = this.getPixelRatio(context);  //获取像素密度的方法 (也可以采用自定义缩放比例)
 		canvas.width = width * scaleBy;   //这里 由于绘制的dom 为固定宽度，居中，所以没有偏移
-		alert(width+"----jkllllllllllllll-----"+scaleBy)
+		// alert(width+"----jkllllllllllllll-----"+scaleBy)
 		canvas.height = (height + offsetTop) * scaleBy;  // 注意高度问题，由于顶部有个距离所以要加上顶部的距离，解决图像高度偏移问题
 
 		context.scale(scaleBy, scaleBy);
