@@ -25,7 +25,7 @@ class app{
 	//绘制dom 元素，生成截图canvas
 	htmlToCanvas(dom,text) {
 		var shareContent = dom;// 需要绘制的部分的 (原生）dom 对象 ，注意容器的宽度不要使用百分比，使用固定宽度，避免缩放问题
-		// var width = shareContent.offsetWidth;  // 获取(原生）dom 宽度
+		var width = shareContent.offsetWidth;  // 获取(原生）dom 宽度
 		var height = shareContent.offsetHeight; // 获取(原生）dom 高
 
 		var offsetTop = shareContent.offsetTop;  //元素距离顶部的偏移量
@@ -40,6 +40,7 @@ class app{
 		
 		var scaleBy = this.getPixelRatio(context);  //获取像素密度的方法 (也可以采用自定义缩放比例)
 		canvas.width = width * scaleBy;   //这里 由于绘制的dom 为固定宽度，居中，所以没有偏移
+		alert(width+"----jkllllllllllllll-----"+scaleBy)
 		canvas.height = (height + offsetTop) * scaleBy;  // 注意高度问题，由于顶部有个距离所以要加上顶部的距离，解决图像高度偏移问题
 
 		context.scale(scaleBy, scaleBy);
